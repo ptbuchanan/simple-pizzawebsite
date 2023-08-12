@@ -2,7 +2,10 @@ import React from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
+import About from './pages/About'
+import Menu from './pages/Menu'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -11,7 +14,10 @@ function App() {
         <Navbar/>
         <Routes>
           <Route path="/" element={<Home/>}/>
+          <Route path="/menu" element={<Menu/>}/>
+          <Route path="/about" element={<About/>}/>
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </div>
   )
